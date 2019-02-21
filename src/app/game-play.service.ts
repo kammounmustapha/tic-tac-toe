@@ -37,6 +37,15 @@ export class GamePlayService {
     this.players.push(player1);
     this.players.push(player2);
   }
+
+  changeTurn() {
+    if (this.turn == 0){
+      this.turn = 1;
+    }
+    else {
+      this.turn = 0
+    }
+  }
   
 
 }
