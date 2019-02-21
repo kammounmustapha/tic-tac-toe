@@ -21,11 +21,26 @@ export class AppComponent {
     else {
       this.gps.blocks[i].setValue("cross");
     }
-    this.changeTurn();
+
+    var complete = this.gps.blockSetComplete();
+    if(complete == true){
+      
+    }
+    this.changeTurn();  
   }
 
   botTurn() {
-    alert("Bot Turn"); 
+    if(this.gps.freeRemainingBlocks <= 0) {
+      return;
+    }
+    var bot_selected = this.gps.figureBotMove()-1;
+    if (this.gps.blocks[bot_selected].free == true) {
+      this.playerClick(bot_selected);
+    }
+    else {
+      this.botTurn();
+      return;
+    }
   }
 
   changeTurn() {
