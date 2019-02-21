@@ -79,14 +79,12 @@ export class GamePlayService {
 
 
 	figureBotMove() {
-		// Priortize by checking block that is completing
 		var bot_move = this.GetCompletingSet();
 
 		if( bot_move > 0 ) {
 			return bot_move;
 		}
 
-		// 2nd Priority Block enemy from completing Set
 		var bot_move = this.blockEnemyAttemptCompleteSet();
 
 		if( bot_move > 0 ) {

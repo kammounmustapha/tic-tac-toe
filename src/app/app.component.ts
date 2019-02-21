@@ -61,8 +61,13 @@ export class AppComponent {
 			
 		} else {
 			this.lock = true;
-			this.gps.players[this.gps.turn].score += 1;
-			this.snackBar.open("Winner:", "Player "+ (this.gps.turn +1), {
+			if (this.gps.turn == 0){
+			var winner = "You! Congrats"	
+			}
+			else {
+				var winner = "Computer." 
+			}
+			this.snackBar.open("Winner is ",": "+ winner, {
 		      duration: 4000,
 		    });
 
