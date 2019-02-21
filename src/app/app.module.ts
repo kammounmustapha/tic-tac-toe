@@ -1,5 +1,7 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {MatSnackBarModule} from '@angular/material/snack-bar'; 
 
 
 import {MatGridListModule} from '@angular/material/grid-list'; 
@@ -13,7 +15,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSnackBarModule,
+    BrowserAnimationsModule
   ],
 
   providers: [],

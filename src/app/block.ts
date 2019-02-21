@@ -3,13 +3,15 @@ export class Block {
     value: string = "";
     symbol: string = "";
 
-    setValue(value){
-        this.value = value;
-        if(this.value = "tick"){
+    setValue(value1){
+        this.value = value1;
+        
+        if(this.value == "tick"){
             this.symbol = "done"
         } else {
             this.symbol = "close"
         }
+        this.free = false;
     }
     
 }
